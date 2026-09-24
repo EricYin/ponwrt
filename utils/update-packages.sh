@@ -85,7 +85,7 @@ echo "Starting package updates..."
 #pkgs=("homeproxy"); UPDATE_PACKAGE pkgs "immortalwrt/homeproxy" "master"; unset pkgs
 
 # soc status app
-pkgs=("luci-app-airoha-npu"); UPDATE_PACKAGE pkgs "ericyin/luci-app-airoha-npu" "main"; unset pkgs
+pkgs=("luci-app-airoha-npu"); UPDATE_PACKAGE pkgs "ericyin/luci-app-airoha-npu" "custom"; unset pkgs
 sed -i 's|include ../../luci.mk|include $(TOPDIR)/feeds/luci/luci.mk|' ./luci-app-airoha-npu/Makefile
 
 # file explorer
@@ -95,4 +95,6 @@ echo " "
 echo "=========================================="
 echo "Package updates completed, list packages folder: "
 ls
+echo "=========================================="
+ls ./luci-app-airoha-npu
 echo "=========================================="
