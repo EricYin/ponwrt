@@ -11,6 +11,8 @@ apply_sed_to_matches() {
 		while IFS= read -r TARGET_FILE; do
 			sed -i "$SED_EXPR" "$TARGET_FILE"
 		done <<< "$MATCHES"
+	else
+		echo "$FILE_NAME not found in $SEARCH_DIR"
 	fi
 }
 
