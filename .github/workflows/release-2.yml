@@ -123,7 +123,7 @@ jobs:
         with:
           name: build-config
           path: |
-            config-final.config
+            defconfig-final.config
 
       - name: Download sources
         run: make download -j"$(nproc)"
