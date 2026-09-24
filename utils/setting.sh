@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "Apply custom settings..."
 
 apply_sed_to_matches() {
 	local SEARCH_DIR=$1
