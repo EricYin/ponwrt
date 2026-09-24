@@ -115,14 +115,14 @@ jobs:
           chmod +x $GITHUB_WORKSPACE/utils/setting.sh
           bash $GITHUB_WORKSPACE/utils/setting.sh
           make defconfig
-          [ -e .config ] && cp .config defconfig-final-${{ matrix.target }}.config
+          [ -e .config ] && cp .config defconfig-final.config
 
       - name: Upload build config files
         uses: actions/upload-artifact@v6
         with:
-          name: build-config
+          name: build-config-${{ matrix.target }}
           path: |
-            defconfig-final-${{ matrix.target }}.config
+            defconfig-final.config
 
       - name: Download sources
         run: make download -j"$(nproc)"
