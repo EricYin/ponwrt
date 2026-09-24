@@ -8,10 +8,9 @@ on:
         required: true
         default: true
         type: boolean
-
 permissions:
-  contents: read
-
+  contents: write
+  actions: write
 env:
   WRT_IP: 192.168.50.1
   TZ: Asia/Shanghai
