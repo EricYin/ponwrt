@@ -88,6 +88,7 @@ jobs:
 
       - name: Install third-party packages
         run: |
+          cd ./package
           chmod +x $GITHUB_WORKSPACE/utils/update-packages.sh
           bash $GITHUB_WORKSPACE/utils/update-packages.sh  
 
