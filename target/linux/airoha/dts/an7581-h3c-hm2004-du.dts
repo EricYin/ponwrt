@@ -88,13 +88,6 @@
 			gpios = <&en7581_pinctrl 15 GPIO_ACTIVE_LOW>;
 		};
 
-		led-lan {
-			color = <LED_COLOR_ID_GREEN>;
-			function = LED_FUNCTION_LAN;
-			/* TODO(verify): stock env ether_gpio=0c -> 0x0c; not measured. */
-			gpios = <&en7581_pinctrl 12 GPIO_ACTIVE_LOW>;
-		};
-
 		led-usb {
 			color = <LED_COLOR_ID_GREEN>;
 			function = LED_FUNCTION_USB;
