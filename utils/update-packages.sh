@@ -88,6 +88,10 @@ echo "Starting package updates..."
 pkgs=("luci-app-airoha-npu"); UPDATE_PACKAGE pkgs "ericyin/luci-app-airoha-npu" "custom"; unset pkgs
 sed -i 's|include ../../luci.mk|include $(TOPDIR)/feeds/luci/luci.mk|' ./luci-app-airoha-npu/Makefile
 
+# client time control
+pkgs=("luci-app-timecontrol"); UPDATE_PACKAGE pkgs "EricYin/luci-app-timecontrol" "custom"; unset pkgs
+sed -i 's|include ../../luci.mk|include $(TOPDIR)/feeds/luci/luci.mk|' ./luci-app-timecontrol/Makefile
+
 # file explorer
 #pkgs=("luci-app-quickfile-go"); UPDATE_PACKAGE pkgs "ericyin/luci-app-quickfile-go" "main" "pkg"; unset pkgs
 
