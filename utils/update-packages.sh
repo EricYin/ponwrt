@@ -84,6 +84,10 @@ echo "Starting package updates..."
 #pkgs=("sing-box" "luci-app-homeproxy"); UPDATE_PACKAGE pkgs "ericyin/luci-app-homeproxy" "legacy3" "pkg"; unset pkgs
 #pkgs=("homeproxy"); UPDATE_PACKAGE pkgs "immortalwrt/homeproxy" "master"; unset pkgs
 
+#pon status
+pkgs=("luci-app-pon-status"); UPDATE_PACKAGE pkgs "ericyin/luci-app" "main"; unset pkgs
+sed -i 's|include ../../luci.mk|include $(TOPDIR)/feeds/luci/luci.mk|' ./luci-app-pon-status/Makefile
+
 # soc status app
 pkgs=("luci-app-airoha-npu"); UPDATE_PACKAGE pkgs "ericyin/luci-app-airoha-npu" "custom"; unset pkgs
 sed -i 's|include ../../luci.mk|include $(TOPDIR)/feeds/luci/luci.mk|' ./luci-app-airoha-npu/Makefile
