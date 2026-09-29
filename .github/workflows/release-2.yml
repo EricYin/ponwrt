@@ -133,7 +133,7 @@ jobs:
       - name: Pack ${{ matrix.target }}
         run: |
           mkdir release
-          tar -zcf "release/ponwrt-${{ matrix.target }}.tar.zst" \
+          tar -zcf "release/ponwrt-${{ matrix.target }}.tar.gz" \
             -C bin/targets/airoha "${{ matrix.target }}"
 
       - name: Upload ${{ matrix.target }}
