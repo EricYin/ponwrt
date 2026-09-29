@@ -1,4 +1,4 @@
-name: Release PonWrt 3
+name: Release PonWrt 4
 
 on:
   workflow_dispatch:
@@ -110,7 +110,7 @@ jobs:
       - name: Configure ${{ matrix.target }}
         run: |
           ./scripts/kconfig.pl + \
-            "configs/${{ matrix.target }}-3.config" > .config
+            "configs/${{ matrix.target }}-4.config" > .config
           chmod +x $GITHUB_WORKSPACE/utils/setting.sh
           bash $GITHUB_WORKSPACE/utils/setting.sh
           make defconfig
