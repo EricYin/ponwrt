@@ -41,9 +41,21 @@
 		key-reset {
 			label = "reset";
 			linux,code = <KEY_RESTART>;
-			/* TODO(verify): GPIO0 is the TCLinux SDK default; no button
-			 * record exists in the stock flash. */
 			gpios = <&en7581_pinctrl 0 GPIO_ACTIVE_LOW>;
+			debounce-interval = <60>;
+		};
+
+		key-wps {
+			label = "wps";
+			linux,code = <KEY_WPS_BUTTON>;
+			gpios = <&en7581_pinctrl 16 GPIO_ACTIVE_LOW>;
+			debounce-interval = <60>;
+		};
+
+		key-wifi {
+			label = "wifi";
+			linux,code = <KEY_RFKILL>;
+			gpios = <&en7581_pinctrl 3 GPIO_ACTIVE_LOW>;
 			debounce-interval = <60>;
 		};
 	};
